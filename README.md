@@ -1,4 +1,4 @@
-# khalilbenaz.github.io
+# vantaflow.github.io
 
 CV / portfolio + blog statique, hébergé sur GitHub Pages.
 **Le blog est branché sur les Issues GitHub** : pas de toolchain, pas de Markdown sur disque, pas de re-déploiement.
@@ -18,7 +18,7 @@ CV / portfolio + blog statique, hébergé sur GitHub Pages.
 
 ## Comment écrire un article
 
-1. Aller sur **github.com/khalilbenaz/khalilbenaz.github.io/issues/new**
+1. Aller sur **github.com/vantaflow/vantaflow.github.io/issues/new**
 2. Cocher le label **`blog`**
 3. **Titre** = titre de l'article
 4. **Corps** = contenu en Markdown
@@ -64,7 +64,7 @@ Ou ouvrez `index.html` directement, mais le blog nécessite `http://` pour que l
 
 ## Déploiement
 
-C'est déjà un site statique → push sur la branche `main` du repo `khalilbenaz.github.io` → GitHub Pages publie automatiquement. Aucune action à configurer.
+C'est déjà un site statique → push sur la branche `main` du repo `vantaflow.github.io` → GitHub Pages publie automatiquement. Aucune action à configurer.
 
 ## Fonctionnalités prêtes
 
@@ -81,7 +81,7 @@ C'est déjà un site statique → push sur la branche `main` du repo `khalilbena
 - ✅ Temps de lecture estimé
 - ✅ Bouton "+ écrire un article" qui ouvre une nouvelle issue préremplie
 - ✅ États vides / d'erreur / rate-limit gérés
-- Pas de newsletter (les lecteurs peuvent s'abonner au flux Atom des issues : `https://github.com/khalilbenaz/khalilbenaz.github.io/issues.atom?labels=blog`)
+- Pas de newsletter (les lecteurs peuvent s'abonner au flux Atom des issues : `https://github.com/vantaflow/vantaflow.github.io/issues.atom?labels=blog`)
 
 **Article (`post.html?id=N`)**
 - ✅ Markdown rendu (marked.js), syntax highlighting (highlight.js)
@@ -95,7 +95,7 @@ C'est déjà un site statique → push sur la branche `main` du repo `khalilbena
 
 - ✅ `photo.jpg` déposée à la racine.
 - ✅ Labels `blog` (émeraude `#059669`) et `draft` (gris) créés sur le repo.
-- ✅ Site déployé sur https://khalilbenaz.github.io
+- ✅ Site déployé sur https://vantaflow.github.io
 
 ## TODO
 

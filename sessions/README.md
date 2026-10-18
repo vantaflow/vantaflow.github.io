@@ -4,7 +4,7 @@
 > The official multi-session workspace suite for **Claude Code** and **Google Antigravity CLI**.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://khalilbenaz.github.io/sessions-manager/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://vantaflow.github.io/sessions-manager/)
 
 ---
 
@@ -12,8 +12,8 @@
 
 | Tool | CLI Target | Ecosystem | Port | Repo & Documentation |
 | :--- | :--- | :--- | :--- | :--- |
-| **Claude Sessions Manager** | `claude` | Anthropic Claude Code | `7890` | [GitHub](https://github.com/khalilbenaz/claude-sessions-manager) · [Live Docs](https://khalilbenaz.github.io/claude-sessions-manager/) |
-| **AGY Sessions Manager** | `agy` | Google Antigravity | `7892` | [GitHub](https://github.com/khalilbenaz/agy-sessions-manager) · [Live Docs](https://khalilbenaz.github.io/agy-sessions-manager/) |
+| **Claude Sessions Manager** | `claude` | Anthropic Claude Code | `7890` | [GitHub](https://github.com/vantaflow/claude-sessions-manager) · [Live Docs](https://vantaflow.github.io/claude-sessions-manager/) |
+| **AGY Sessions Manager** | `agy` | Google Antigravity | `7892` | [GitHub](https://github.com/vantaflow/agy-sessions-manager) · [Live Docs](https://vantaflow.github.io/agy-sessions-manager/) |
 
 ---
 
@@ -33,7 +33,7 @@ csm install
 csm open
 ```
 
-Or download native packages from [Claude Sessions Releases](https://github.com/khalilbenaz/claude-sessions-manager/releases) (macOS `.dmg` and Windows `.exe`).
+Or download native packages from [Claude Sessions Releases](https://github.com/vantaflow/claude-sessions-manager/releases) (macOS `.dmg` and Windows `.exe`).
 
 ---
 
@@ -51,7 +51,7 @@ asm install
 asm open
 ```
 
-Or download native packages from [AGY Sessions Releases](https://github.com/khalilbenaz/agy-sessions-manager/releases) (macOS `.dmg` and Windows `.exe`).
+Or download native packages from [AGY Sessions Releases](https://github.com/vantaflow/agy-sessions-manager/releases) (macOS `.dmg` and Windows `.exe`).
 
 ---
 
@@ -67,4 +67,4 @@ You can run both side-by-side to leverage Claude 3.7 Sonnet for coding alongside
 
 ## 📄 License
 
-MIT © [Khalil Benazzouz](https://github.com/khalilbenaz)
+MIT © [Khalil Benazzouz](https://github.com/vantaflow)
