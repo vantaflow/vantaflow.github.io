@@ -1,0 +1,37 @@
+name: Test install.sh
+
+on:
+  push:
+    paths: [install.sh, .github/workflows/install-test.yml]
+  schedule:
+    - cron: "0 6 * * 1"   # weekly: catches a release that stops shipping a Mac build
+  workflow_dispatch:
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [cleanmac, utv, ktv, ktv-flutter, md-reader, lyra, csm, sessions, agy, fsm]
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ${{ matrix.app }} (piped, like curl | bash, with macOS bash 3.2)
+        env:
+          VF_DEST: ${{ runner.temp }}/Apps
+          VF_NO_OPEN: "1"
+          GH_TOKEN: ${{ github.token }}
+        run: cat install.sh | /bin/bash -s ${{ matrix.app }}
+      - name: Check (no quarantine, launches)
+        run: |
+          app="$(find "$RUNNER_TEMP/Apps" -maxdepth 1 -name '*.app' | head -1)"
+          echo "installed: $app"
+          bin="$(defaults read "$app/Contents/Info" CFBundleExecutable)"
+          defaults read "$app/Contents/Info" CFBundleShortVersionString
+          if xattr -r "$app" | grep -q com.apple.quarantine; then echo "::error::quarantine flag present"; exit 1; fi
+          codesign --verify --deep --strict "$app" || echo "::warning::codesign verify failed (unsigned build)"
+          open "$app"
+          for i in $(seq 1 30); do pgrep -x "$bin" >/dev/null && break; sleep 1; done
+          sleep 8
+          pgrep -x "$bin" || { echo "::error::$bin did not stay running"; ls -t ~/Library/Logs/DiagnosticReports | head -3 || true; exit 1; }
+          echo "✓ $bin launches"
